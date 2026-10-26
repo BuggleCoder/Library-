@@ -51,3 +51,5 @@ export class elModifier {
         return this;
     }
 }
+
+const $ = (selector) => new elModifier(selector);
