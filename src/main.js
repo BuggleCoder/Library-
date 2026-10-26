@@ -1,4 +1,4 @@
-export class lionObj {
+export class elModifier {
     constructor(selector) {
         this.elements = typeof selector === 'string' 
         ? Array.from(document.querySelectorAll(selector)) 
