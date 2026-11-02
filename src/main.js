@@ -50,6 +50,22 @@ export class elModifier {
         this.elements.forEach(el => el.addEventListener(event, callback));
         return this;
     }
+
+    remove() {
+        this.elements.forEach(el => {
+            el.remove()
+        });
+        return this;
+    }
+
+    getIDs() {
+        return this.elements.map(el => el.id);
+    }
+
+    getClass() {
+        return this.elements.map(el => el.classList);
+    }
+
 }
 
 const $ = (selector) => new elModifier(selector);
