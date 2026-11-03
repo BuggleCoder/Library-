@@ -1,20 +1,17 @@
-export class calc() {
-    roundToNearest(a, b) {
-        return a - (a % b);
-    }
-    
-    digits(a) {
-        if (a === 0) return 1; 
-        return Math.floor(Math.log10(Math.abs(a))) + 1;
-    }
+export class Calc {
+  roundToNearest(a, b) {
+    if (b === 0) return a;
+    return Math.round(a / b) * b;
+  }
 
-    toPow(a, b) {
-        if (b === 0) {
-            return 0;
-        } else if (b === 1) {
-            return a;
-        }
+  digits(a) {
+    if (a === 0) return 1;
+    return Math.floor(Math.log10(Math.abs(a))) + 1;
+  }
 
-        return Math.pow(a, b);
-    }
+  toPow(a, b) {
+    if (b === 0) return 1;
+    if (b === 1) return a;
+    return Math.pow(a, b);
+  }
 }
