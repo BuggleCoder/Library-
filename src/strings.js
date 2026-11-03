@@ -1,5 +1,5 @@
 export class String {
-  join(a, b) {
+  glue(a, b) {
     return a + b;
   }
 
